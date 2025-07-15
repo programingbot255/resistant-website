@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resistor Color Code Calculator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Resistor Color Code Calculator</h1>
+  <div class="tab-buttons">
+    <button id="valueToColorBtn" class="active">Value ➜ Color</button>
+    <button id="colorToValueBtn">Color ➜ Value</button>
+  </div>
+  <div id="valueToColor" class="section active">
+    <label for="resistorValue">Enter Resistor Value (e.g. 2k, 470, 1M):</label>
+    <input type="text" id="resistorValue" placeholder="Ex: 2k">
+    <label for="bandCount">Select Band Count:</label>
+    <select id="bandCount">
+      <option value="3" selected>3 Band (Default)</option>
+      <option value="4">4 Band</option>
+      <option value="5">5 Band</option>
+    </select>
+    <button class="calc" onclick="convertToColor()">Calculate Bands</button>
+    <div class="result" id="colorResult"></div>
+  </div>
+  <div id="colorToValue" class="section">
+    <label>Choose Colors:</label>
+    <select id="c1"></select>
+    <select id="c2"></select>
+    <select id="c3"></select>
+    <select id="c4"></select>
+    <select id="c5"></select>
+    <button class="calc" onclick="convertToValue()">Calculate Value</button>
+    <div class="result" id="valueResult"></div>
+  </div>
+  <footer class="footer">Made by @ K TANVIR</footer>
+  <script src="script.js"></script>
+</body>
+</html>
